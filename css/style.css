@@ -1,0 +1,465 @@
+/* Global Variables */
+:root {
+	/* Font Family */
+	--header: 'Montserrat', sans-serif;
+	--ff: 'Open Sans', sans-serif;
+
+	/* Font Size */
+	--fs-xxl: 2.25rem;
+	--fs-xl: 1.875rem;
+	--fs-lg: 1.5rem;
+	--fs-md: 1.35rem;
+	--fs-sm: 1rem;
+	--fs-xs: .875rem;
+
+	/* Font Weight */
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+	--fw-700: 700;
+
+	/* Color */
+	--clr-bg: #e9e9e9;
+	--clr-light: #fff;
+	--clr-primary: #042339;
+	--clr-accent: #d62828;
+
+	--transition: all 250ms ease-in-out;
+
+	/* Border */
+	--border: 2px solid rgba(0, 0, 0, .08);
+
+	/* Shadow */
+	--shdaow: 0 6px 10px rgba(0, 0, 0, .08),
+		0 0 6px rgba(0, 0, 0, .05);
+}
+
+/*  ------------------------- Global Styling -------------------------  */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--ff);
+	background-color: var(--clr-bg);
+}
+
+/*  ------------------------- College Intro -------------------------  */
+.clgIntro {
+	background-color: var(--clr-bg);
+	padding: 2rem 0;
+	gap: 3rem;
+}
+
+.clgInfo h2 {
+	font-family: var(--header);
+	font-size: 2.25rem;
+}
+
+.clgInfo h5 {
+	font-size: 1.5rem;
+	font-family: var(--header);
+	font-weight: var(--fw-700);
+}
+
+.clgInfo h6 {
+	font-family: 1.25rem;
+}
+
+/* ------------------------- Navbar -------------------------  */
+nav {
+	background-color: var(--clr-primary);
+	min-height: 5rem;
+	min-width: 100%;
+}
+
+nav a {
+	color: var(--clr-bg);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-600);
+}
+
+/*  ------------------------- Dropdown -------------------------  */
+.navbarMenu>li,
+.navbarMenu>a {
+	display: inline-block;
+}
+
+.navbarMenu {
+	display: flex;
+	justify-content: space-around;
+	min-width: 100%;
+}
+
+.navbarMenu li {
+	position: relative;
+}
+
+.navbarMenu li a {
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+}
+
+/*  ------------------------- dropdownMenu Style -------------------------  */
+.dropdownMenu,
+.nested {
+	position: absolute;
+	display: none;
+}
+
+.dropdownMenu {
+	margin-top: 1rem;
+	background-color: var(--clr-primary);
+	min-width: 100%;
+	left: 0;
+}
+
+.dropdownMenu li {
+	padding-top: 15px;
+	list-style-type: none;
+}
+
+.nested li {
+	list-style-type: none;
+}
+
+.dropdownMenu li a {
+	color: var(--clr-bg);
+}
+
+/*  ------------------------- Nested Menu Style -------------------------  */
+.nested {
+	top: 0;
+	left: 100%;
+	background-color: var(--clr-primary);
+	color: var(--clr-light);
+}
+
+.dropdownMenu li a,
+.nested li a {
+	margin: -10px 0 5px 0;
+}
+
+/*  ------------------------- Show on Focus/Click -------------------------  */
+.navbarMenu li:focus-within>.dropdownMenu {
+	display: block;
+	animation: slideUp 250ms ease-in-out;
+}
+
+.dropdownMenu li:focus-within>.nested {
+	display: block;
+	animation: slideLeft 250ms ease-in-out;
+}
+
+/* ------------------------- Navbar -------------------------  */
+
+section .card {
+	/* cursor: pointer; */
+	background-color: var(--clr-light);
+	border: 0;
+	transition: var(--transition);
+	border-radius: 10px;
+}
+
+.hover:hover {
+	transform: scale(1.025);
+	box-shadow: var(--shdaow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+	color: var(--clr-accent);
+}
+
+h4,
+h5,
+h6,
+p {
+	color: var(--clr-primary);
+}
+
+li {
+	list-style-type: none;
+	color: var(--clr-bg);
+}
+
+li a:hover,
+li a:focus {
+	color: var(--clr-accent);
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-primary);
+}
+
+a:hover,
+a:focus {
+	color: var(--clr-accent);
+}
+
+/* ------------------------- Global Classes ------------------------- */
+.bgclr-primary {
+	background-color: var(--clr-primary);
+}
+
+.bgclr-accent {
+	background-color: var(--clr-accent);
+}
+
+.bgclr-light {
+	background: var(--clr-light);
+}
+
+.clr-primary {
+	color: var(--clr-primary);
+}
+
+.clr-accent {
+	color: var(--clr-accent);
+}
+
+.clr-light {
+	color: var(--clr-light);
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mh-50 {
+	min-height: 50vh;
+}
+
+.mh-75 {
+	min-height: 75vh;
+}
+
+.mh-100 {
+	min-height: 100vh;
+}
+
+.card-mh {
+	height: 10rem;
+}
+
+/* ------------------------- Notice Section ------------------------- */
+.noticeBar {
+	background-color: var(--clr-primary);
+	height: 100px;
+}
+
+.noticeBar h4 {
+	width: 10%;
+}
+
+.noticeBar a {
+	margin: -10px 1rem 0 1rem;
+	color: var(--clr-bg);
+	font-size: var(--fs-md);
+	transition: var(--transition);
+}
+
+.noticeBar a:hover {
+	color: var(--clr-accent);
+}
+
+.reverseOrder {
+	flex-direction: row-reverse;
+}
+
+.intro img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.principle-msg {
+	height: 425px;
+	background-color: var(--clr-primary);
+	margin: 0 1.5rem;
+}
+
+.principle-msg .card {
+	background-color: transparent;
+}
+
+.principle-msg .card h4{
+	font-size: var(--fs-lg);
+}
+.principle-msg .card p{
+	font-size: var(--fs-md);
+}
+
+.principle-msg .card h4,
+.principle-msg .card p {
+	color: var(--clr-light);
+}
+
+.signature{
+	min-height: 5rem;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+
+/* ------------------------- Animation ------------------------- */
+@keyframes slideUp {
+	0% {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/*  ------------------------- Responsive Design -------------------------  */
+@media screen and (max-width:1200px) {
+	.noticeBar h4 {
+		width: 12%;
+	}
+
+	.clgInfo h2 {
+		font-family: var(--header);
+		font-size: 2rem;
+	}
+
+	.clgInfo h5 {
+		font-size: 1.35rem;
+	}
+
+	.clgInfo h6 {
+		font-family: 1.25rem;
+	}
+}
+
+@media screen and (max-width:992px) {
+	.clgIntro {
+		padding: 2rem;
+		gap: 1rem;
+	}
+
+	.clgInfo h2 {
+		font-size: 2rem;
+	}
+
+	.clgInfo h5 {
+		font-size: 1.2rem;
+	}
+
+	.clgInfo h6 {
+		font-family: 1rem;
+	}
+
+	.noticeBar h4 {
+		width: 18%;
+	}
+
+	h4 {
+		font-size: 1.35rem;
+	}
+
+	h6 {
+		font-size: 1rem;
+	}
+
+	.navbarMenu li {
+		padding-top: 1rem;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.noticeBar {
+		height: 50px;
+	}
+
+	.clgInfo h2 {
+		font-size: 1.5rem;
+	}
+
+	.clgInfo h5 {
+		font-size: 1rem;
+	}
+
+	.clgInfo h6 {
+		font-size: .85rem;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+	}
+
+	.clgIntro {
+		gap: 1.5rem;
+	}
+
+	.facilites .card {
+		margin: 1rem 0;
+	}
+
+	.facilites .card-body {
+		padding: 1rem;
+	}
+
+	.noticeBar h4 {
+		font-size: var(--fs-sm);
+		width: 25%;
+	}
+
+	.teacher-info p {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width:449px) {
+	.clgIntro {
+		gap: 1rem;
+	}
+
+	.clgInfo h2 {
+		font-size: 1.35rem;
+	}
+
+	.noticeBar h4 {
+		width: 40%;
+	}
+
+	.noticeBar a {
+		font-size: var(--fs-xs);
+	}
+}
