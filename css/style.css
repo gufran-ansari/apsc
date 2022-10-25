@@ -174,11 +174,7 @@ section .card {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
 	text-transform: uppercase;
 }
 
@@ -302,10 +298,11 @@ a:focus {
 	background-color: transparent;
 }
 
-.principle-msg .card h4{
+.principle-msg .card h4 {
 	font-size: var(--fs-lg);
 }
-.principle-msg .card p{
+
+.principle-msg .card p {
 	font-size: var(--fs-md);
 }
 
@@ -314,7 +311,7 @@ a:focus {
 	color: var(--clr-light);
 }
 
-.signature{
+.signature {
 	min-height: 5rem;
 	margin-bottom: 1rem;
 	display: flex;
