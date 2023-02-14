@@ -264,11 +264,6 @@ a:focus {
 	height: 10rem;
 }
 
-.card-text {
-	max-width: 500px;
-	width: 100%;
-}
-
 .slideshow-index {
 	border: 5px solid var(--clr-primary);
 }
@@ -297,7 +292,6 @@ a:focus {
 
 .noticeBar a {
 	margin: -10px 1rem 0 1rem;
-	/* color: var(--clr-bg); */
 	font-size: var(--fs-md);
 	transition: var(--transition);
 }
