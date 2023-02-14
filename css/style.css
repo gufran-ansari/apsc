@@ -80,7 +80,9 @@ nav {
 }
 
 nav a {
-	color: var(--clr-bg);
+	/* color: var(--clr-bg); */
+	color: yellow;
+
 	font-size: var(--fs-sm);
 	font-weight: var(--fw-600);
 }
@@ -236,6 +238,10 @@ a:focus {
 	color: var(--clr-light);
 }
 
+.clr-yellow {
+	color: yellow;
+}
+
 .flex {
 	display: flex;
 	justify-content: center;
@@ -263,6 +269,22 @@ a:focus {
 	width: 100%;
 }
 
+.slideshow-index {
+	border: 5px solid var(--clr-primary);
+}
+
+.chief .card {
+	max-width: 400px;
+	width: 100%;
+}
+
+.chief img {
+	max-width: 300px;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: 50%;
+}
+
 /* ------------------------- Notice Section ------------------------- */
 .noticeBar {
 	background-color: var(--clr-primary);
@@ -275,7 +297,7 @@ a:focus {
 
 .noticeBar a {
 	margin: -10px 1rem 0 1rem;
-	color: var(--clr-bg);
+	/* color: var(--clr-bg); */
 	font-size: var(--fs-md);
 	transition: var(--transition);
 }
